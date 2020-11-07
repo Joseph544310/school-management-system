@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Universal School</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{% static 'home/css/home.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1> Homepage </h1>
+    <hr/>
+
+    <div class="row justify-content-around">
+        <div class="col-3">
+            <ul>
+                <li><a href={% url 'reghome' %} class="button btn">Registration</a></li>
+                <li><a href={% url 'financial-home' %} class="button btn">Financial</a></li>
+                <li><a href ={% url 'grading-home' %} class="button btn">Grading</a></li>
+                <li><a href={% url 'logout' %} class="btn btn-danger">Logout</a></li>
+            </ul>
+        </div>
+        <div class="col-3"> <img src="https://www.fede.education/wp-content/uploads/2018/02/LOGO_UNIVERSAL-SCHOOL.jpg" class="img-fluid" alt="logo" ></div>
+    </div>
+</body>
+</html>

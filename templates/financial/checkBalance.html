@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {#    google icons#}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {#    icon on tab#}
+     <link rel="shortcut icon" href="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.0-9/21751379_1733263903643852_2063439652329962621_n.png?_nc_cat=101&_nc_ht=scontent.fbey5-1.fna&oh=3815ab500be66dad0614f6bce816ddbb&oe=5D44A55C" />
+    <meta charset="UTF-8">
+    <title>Financial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{% static 'financial/css/checkbalance.css' %}" rel="stylesheet" type="text/css">
+</head>
+{#<body style="background-color:powderblue;">#}
+<body >
+
+    <h1> Financial </h1>
+    <hr/>
+
+    <h2> Check a student balance </h2>
+    <div class="row justify-content-around">
+        <div class="col-3">
+            {%  if all_students %}
+                <ul>
+                    {% for student in  all_students %}
+                        <li><a href="/financial/checkbalance/{{ student.id }}/">{{ student.First_Name }} {{ student.Last_Name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <h3>You don't have any student registered</h3>
+            {% endif %}
+            <a href="{% url 'financial-home' %}" class="btn btn-danger">Back</a>
+        </div>
+        <div class="col-3"> <img src="https://www.fede.education/wp-content/uploads/2018/02/LOGO_UNIVERSAL-SCHOOL.jpg" class="img-fluid" alt="logo" ></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {#    google icons#}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {#    icon on tab#}
+     <link rel="shortcut icon" href="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.0-9/21751379_1733263903643852_2063439652329962621_n.png?_nc_cat=101&_nc_ht=scontent.fbey5-1.fna&oh=3815ab500be66dad0614f6bce816ddbb&oe=5D44A55C" />
+    <meta charset="UTF-8">
+    <title>Error!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{% static 'draftapp/css/error.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <p>{{ message }}</p>
+    <a href = "{% url 'views' %}" class="btn btn-danger">Back</a>
+</body>
+</html>

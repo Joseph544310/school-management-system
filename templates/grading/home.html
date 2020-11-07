@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {#    google icons#}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {#    icon on tab#}
+     <link rel="shortcut icon" href="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.0-9/21751379_1733263903643852_2063439652329962621_n.png?_nc_cat=101&_nc_ht=scontent.fbey5-1.fna&oh=3815ab500be66dad0614f6bce816ddbb&oe=5D44A55C" />
+    <meta charset="UTF-8">
+    <title>Grading</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{% static 'grading/css/home.css' %}" rel="stylesheet" type="text/css">
+</head>
+{#<body style="background-color:powderblue;">#}
+<body >
+
+    <h1> Grading </h1>
+    <hr/>
+
+    <div class="row justify-content-around">
+        <div class="col-3">
+            <ul>
+                <li><a href="grades/1">Grade 1</a></li>
+                <li><a href="grades/2">Grade 2</a></li>
+                <li><a href="grades/3">Grade 3</a></li>
+                <li><a href="grades/4">Grade 4</a></li>
+                <li><a href="grades/5">Grade 5</a></li>
+                <li><a href="grades/6">Grade 6</a></li>
+                <li><a href="grades/7">Grade 7</a></li>
+                <li><a href="grades/8">Grade 8</a></li>
+                <li><a href="grades/9">Grade 9</a></li>
+                <li><a href="grades/10">Grade 10</a></li>
+                <li><a href="grades/11">Grade 11</a></li>
+                <li><a href="grades/12">Grade 12</a></li>
+                <li><a href={% url 'home-home' %} class="btn btn-danger">Back</a></li>
+            </ul>
+        </div>
+        <div class="col-3"> <img src="https://www.fede.education/wp-content/uploads/2018/02/LOGO_UNIVERSAL-SCHOOL.jpg" class="img-fluid" alt="logo" ></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'draftapp/css/edits.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row justify-content-around">
+        <div class="col-3">
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" class="btn btn-primary" value="Update"/>
+                <a href="/registration/views" class="btn btn-danger">Back</a>
+            </form>
+        </div>
+        <div class="col-3">
+            <img src="https://www.fede.education/wp-content/uploads/2018/02/LOGO_UNIVERSAL-SCHOOL.jpg" class="img-fluid" alt="logo" >
+        </div>
+    </div>
+</body>
+</html>>

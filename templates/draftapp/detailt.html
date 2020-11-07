@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {#    google icons#}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {#    icon on tab#}
+     <link rel="shortcut icon" href="https://scontent.fbey5-1.fna.fbcdn.net/v/t1.0-9/21751379_1733263903643852_2063439652329962621_n.png?_nc_cat=101&_nc_ht=scontent.fbey5-1.fna&oh=3815ab500be66dad0614f6bce816ddbb&oe=5D44A55C" />
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{% static 'draftapp/css/detailt.css' %}" rel="stylesheet" type="text/css">
+</head>
+{#<body style="background-color:powderblue;">#}
+<body >
+
+    <h1>Information about: {{ teacher.First_Name }} {{ teacher.Last_Name }}</h1>
+    <hr/>
+    <div class="row justify-content-around">
+        <div class="col-6">
+            <ul>
+                <li>First Name: {{ teacher.First_Name }}</li>
+                <li>Last Name:{{ teacher.Last_Name}}</li>
+                <li>teacher ID:{{ teacher.id}}</li>
+                <li>Sex:{{ teacher.Sex }}</li>
+                <li>Nationality:{{ teacher.Nationality }}</li>
+                <li>Born in:{{ teacher.Born_in }}</li>
+                <li>City:{{ teacher.City }}</li>
+                <li>Address:{{ teacher.Address }}</li>
+                <li>Building:{{ teacher.Building }}</li>
+                <li>Floor:{{ teacher.Floor }}</li>
+                <li>Fixed:{{ teacher.Fixed }}</li>
+                <li>Mobile:{{ teacher.Mobile }}</li>
+                <li>Bloodtype:{{ teacher.teacher_Bloodtype }}</li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <ul>
+                <li><a href="/registration/teacher/edit/{{ teacher.id }}" class = "button btn" >Update Fields</a></li>
+                <li><a href="/registration/deletedt/{{ teacher.id }}" class = "button btn" >Delete Record</a></li>
+                <li><a href={% url 'viewt' %} class="btn btn-danger">Back</a></li>
+            </ul>
+        </div>
+        <div class="col-3"> <img src="https://www.fede.education/wp-content/uploads/2018/02/LOGO_UNIVERSAL-SCHOOL.jpg" class="img-fluid" alt="logo" ></div>
+    </div>
+
+</body>
+</html>
