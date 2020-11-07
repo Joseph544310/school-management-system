@@ -5,6 +5,6 @@ Simple school management system (registration - grading - tuition) done using Dj
 https://universal-school-management.herokuapp.com/
 
 # Steps:
-1- pip install -r requirements.txt
+1- pip install -r requirements.txt<br/>
 2- python manage.py runserver
  
