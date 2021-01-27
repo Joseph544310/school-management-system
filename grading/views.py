@@ -1,13 +1,7 @@
 from django.shortcuts import render
-# from django.template import loader
-# from django.http import HttpResponse
-# from .forms import CreateStudentForm
-# from .forms import CreateTeacherForm
 from .forms import CreateGradeForm
 from .models import Grade
 from draftapp.models import Student
-# from .models import Teacher
-# from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
 

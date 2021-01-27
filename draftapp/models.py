@@ -64,8 +64,7 @@ class Student(models.Model):
     Guardian_Bloodtype= models.CharField(max_length=3, choices=Bloodtype,  default= 'A+')
 
     def __str__(self):
-        temp=str(self.Student_ID)
-        return self.First_Name + '-' + self.Last_Name + '-' + temp
+        return self.First_Name + '-' + self.Last_Name
 
 
 class Teacher(models.Model):
