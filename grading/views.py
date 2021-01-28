@@ -13,7 +13,7 @@ def home(request):
 @login_required
 def addg(request, student_id):
     if request.method == "POST":
-        form = CreateGradeForm(request.POST)
+        form = CreateGradeForm(data=request.POST)
         if form.is_valid():
             formdata = form.cleaned_data
             Semester = formdata['Semester']

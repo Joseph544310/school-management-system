@@ -5,7 +5,12 @@ from draftapp.models import Student
 class Grade(models.Model):
 
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    Semester = models.IntegerField(default=1)
+    SEMESTER = [
+        (1, 1),
+        (2, 2),
+        (3, 3),
+    ]
+    Semester = models.IntegerField(default=1, choices=SEMESTER)
     Math_Grade = models.FloatField(default=0.0)
     Physics_Grade = models.FloatField(default=0.0)
     Chemistry_Grade = models.FloatField(default=0.0)

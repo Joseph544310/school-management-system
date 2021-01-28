@@ -84,14 +84,14 @@ def detailt(request, Teacher_ID):
 def editt(request, IDofteacher):
     if request.method == 'POST':  # post or get, s7ab men html w zetta bel database, get ye3ne jib men db w cout
 
-        form = CreateTeacherForm(instance=Teacher.objects.get(IDofteacher), data=request.POST)  #
+        form = CreateTeacherForm(instance=Teacher.objects.get(id=IDofteacher), data=request.POST)  #
         if form.is_valid():
             instance = form.save(commit=False)
             instance.save()
 
             return HttpResponseRedirect("/registration/teacher/{}".format(IDofteacher))
     else:
-        form = CreateTeacherForm(initial=Teacher.objects.get(id=IDofteacher))
+        form = CreateTeacherForm(instance=Teacher.objects.get(id=IDofteacher))
     return render(request, 'draftapp/editt.html', {'form': form})
 
 
